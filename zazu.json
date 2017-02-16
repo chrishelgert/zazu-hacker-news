@@ -2,6 +2,7 @@
   "name": "zazu-hacker-news",
   "version": "1.0.0",
   "description": "Zazu Plugin to show the latest Hacker News",
+  "icon": "icon.png",
   "blocks": {
     "input": [
       {
