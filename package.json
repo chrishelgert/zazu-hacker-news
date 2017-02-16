@@ -1,0 +1,40 @@
+{
+  "name": "zazu-hacker-news",
+  "version": "1.0.0",
+  "description": "Zazu Plugin to show the latest Hacker News",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && jest"
+  },
+  "license": "MIT",
+  "author": "Chris Helgert",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrishelgert/zazu-hacker-news.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrishelgert/zazu-hacker-news/issues"
+  },
+  "homepage": "https://github.com/chrishelgert/zazu-hacker-news#readme",
+  "keywords": [
+    "zazu",
+    "hacker-news"
+  ],
+  "dependencies": {
+    "got": "6.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.13.1",
+    "jest": "^18.1.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/src/*.js"
+    ]
+  }
+}

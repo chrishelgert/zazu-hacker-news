@@ -1,0 +1,25 @@
+{
+  "name": "zazu-hacker-news",
+  "version": "1.0.0",
+  "description": "Zazu Plugin to show the latest Hacker News",
+  "blocks": {
+    "input": [
+      {
+        "id": "hackerNews",
+        "type": "PrefixScript",
+        "prefix": "hn",
+        "space": false,
+        "args": "None",
+        "script": "src/index.js",
+        "connections": ["Open"]
+      }
+    ],
+    "output": [
+      {
+        "id": "Open",
+        "type": "OpenInBrowser",
+        "url": "{value}"
+      }
+    ]
+  }
+}
