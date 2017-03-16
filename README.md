@@ -1,5 +1,7 @@
 # zazu-hacker-news
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrishelgert/zazu-hacker-news.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/chrishelgert/zazu-hacker-news.svg?branch=master)](https://travis-ci.org/chrishelgert/zazu-hacker-news)
 [![Build status](https://ci.appveyor.com/api/projects/status/die4cd3egpv533m9/branch/master?svg=true)](https://ci.appveyor.com/project/chrishelgert/zazu-hacker-news/branch/master)
 [![codecov](https://codecov.io/gh/chrishelgert/zazu-hacker-news/branch/master/graph/badge.svg)](https://codecov.io/gh/chrishelgert/zazu-hacker-news)
