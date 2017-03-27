@@ -15,35 +15,44 @@ describe('hacker-news', () => {
 
   describe('load', () => {
     test('it calls got and map the response to title and value', () => {
-      got.mockImplementation(() => new Promise(resolve => resolve({
-        body: [{
+      got.mockImplementation(
+        () =>
+          new Promise(resolve =>
+            resolve({
+              body: [
+                {
+                  title: 'test',
+                  url: 'www.test.com/test',
+                },
+              ],
+            })),
+      )
+
+      return hackerNews.load().then((articles) => {
+        expect(got).toHaveBeenCalledWith('http://node-hnapi.herokuapp.com/news', { json: true })
+        expect(articles).toBeInstanceOf(Array)
+
+        expect(articles[0]).toEqual({
+          id: 'hn-test',
           title: 'test',
-          url: 'www.test.com/test',
-        }],
-      })))
-
-      return hackerNews
-        .load()
-        .then((articles) => {
-          expect(got).toHaveBeenCalledWith('http://node-hnapi.herokuapp.com/news', { json: true })
-          expect(articles).toBeInstanceOf(Array)
-
-          expect(articles[0].title).toBe('test')
-          expect(articles[0].value).toBe('www.test.com/test')
+          value: 'www.test.com/test',
         })
+      })
     })
 
     test('it will log the error to the console', () => {
-      got.mockImplementation(() => new Promise((resolve, reject) => reject({
-        response: { body: 'Internal Server Error' },
-      })))
+      got.mockImplementation(
+        () =>
+          new Promise((resolve, reject) =>
+            reject({
+              response: { body: 'Internal Server Error' },
+            })),
+      )
 
-      return hackerNews
-        .load()
-        .catch(() => {
-          // eslint-disable-next-line no-console
-          expect(console.error).toHaveBeenCalledWith('Internal Server Error')
-        })
+      return hackerNews.load().catch(() => {
+        // eslint-disable-next-line no-console
+        expect(console.error).toHaveBeenCalledWith('Internal Server Error')
+      })
     })
   })
 })
