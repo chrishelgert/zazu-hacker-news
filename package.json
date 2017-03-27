@@ -25,8 +25,8 @@
     "got": "6.7.1"
   },
   "devDependencies": {
-    "eslint": "^3.15.0",
-    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.2",
     "eslint-plugin-import": "^2.2.0",
     "husky": "^0.13.3",
     "jest": "^19.0.2"
