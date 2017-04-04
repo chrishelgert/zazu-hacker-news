@@ -6,7 +6,7 @@ module.exports.load = () =>
       response.body.map(article => ({
         id: `hn-${article.title}`,
         title: article.title,
-        value: article.url,
+        value: article.url
       })))
     .catch((error) => {
       // eslint-disable-next-line no-console

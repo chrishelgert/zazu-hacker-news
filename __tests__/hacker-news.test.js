@@ -22,9 +22,9 @@ describe('hacker-news', () => {
               body: [
                 {
                   title: 'test',
-                  url: 'www.test.com/test',
-                },
-              ],
+                  url: 'www.test.com/test'
+                }
+              ]
             })),
       )
 
@@ -35,7 +35,7 @@ describe('hacker-news', () => {
         expect(articles[0]).toEqual({
           id: 'hn-test',
           title: 'test',
-          value: 'www.test.com/test',
+          value: 'www.test.com/test'
         })
       })
     })
@@ -44,8 +44,9 @@ describe('hacker-news', () => {
       got.mockImplementation(
         () =>
           new Promise((resolve, reject) =>
+            // eslint-disable-next-line prefer-promise-reject-errors
             reject({
-              response: { body: 'Internal Server Error' },
+              response: { body: 'Internal Server Error' }
             })),
       )
 
