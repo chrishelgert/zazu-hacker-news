@@ -25,7 +25,7 @@ describe('hacker-news', () => {
                   url: 'www.test.com/test'
                 }
               ]
-            })),
+            }))
       )
 
       return hackerNews.load().then((articles) => {
@@ -47,7 +47,7 @@ describe('hacker-news', () => {
             // eslint-disable-next-line prefer-promise-reject-errors
             reject({
               response: { body: 'Internal Server Error' }
-            })),
+            }))
       )
 
       return hackerNews.load().catch(() => {
