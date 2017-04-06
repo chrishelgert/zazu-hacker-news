@@ -4,7 +4,7 @@
   "description": "Zazu Plugin to show the latest Hacker News",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "standard --verbose | snazzy",
     "test": "npm run lint && jest"
   },
   "license": "MIT",
@@ -25,11 +25,10 @@
     "got": "6.7.1"
   },
   "devDependencies": {
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb-base": "^11.1.2",
-    "eslint-plugin-import": "^2.2.0",
     "husky": "^0.13.3",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "snazzy": "^6.0.0",
+    "standard": "^10.0.0"
   },
   "jest": {
     "collectCoverage": true,
@@ -37,10 +36,9 @@
       "**/src/*.js"
     ]
   },
-  "greenkeeper": {
-    "ignore": [
-      "eslint",
-      "eslint-plugin-import"
-    ]
+  "standard": {
+    "env": {
+      "jest": true
+    }
   }
 }
