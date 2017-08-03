@@ -1,7 +1,7 @@
 const got = require('got')
 
 module.exports.load = () =>
-  got('http://node-hnapi.herokuapp.com/news', { json: true })
+  got('http://node-hnapi.herokuapp.com/news', { json: true, useElectronNet: false })
     .then(response =>
       response.body.map(article => ({
         id: `hn-${article.title}`,
