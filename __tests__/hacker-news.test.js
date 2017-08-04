@@ -29,7 +29,7 @@ describe('hacker-news', () => {
       )
 
       return hackerNews.load().then((articles) => {
-        expect(got).toHaveBeenCalledWith('http://node-hnapi.herokuapp.com/news', { json: true })
+        expect(got).toHaveBeenCalledWith('http://node-hnapi.herokuapp.com/news', { json: true, useElectronNet: false })
         expect(articles).toBeInstanceOf(Array)
 
         expect(articles[0]).toEqual({
