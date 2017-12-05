@@ -22,7 +22,7 @@
     "hacker-news"
   ],
   "dependencies": {
-    "got": "8.0.0"
+    "got": "8.0.1"
   },
   "devDependencies": {
     "husky": "^0.14.0",
