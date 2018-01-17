@@ -22,11 +22,11 @@
     "hacker-news"
   ],
   "dependencies": {
-    "got": "8.0.1"
+    "got": "8.0.2"
   },
   "devDependencies": {
     "husky": "^0.14.0",
-    "jest": "^22.0.3",
+    "jest": "^22.1.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.1"
   },
